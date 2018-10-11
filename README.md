@@ -1,5 +1,5 @@
 # Transpose-CSV-OR-Excel-File
-The following table (attached in mail) should be read from an csv file (separated via “;”) and a new file should be created containing the transposed (rotated) table:
+The following table should be read from an csv file (separated via “;”) and a new file should be created containing the transposed (rotated) table:
 
 			Figure2: Transposed Table
 
