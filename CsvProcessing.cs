@@ -17,7 +17,7 @@ namespace TecanProgrammingTask_Mokrani
 
         DataTable mydata ;
         //Convert the csv Contents into a datatable
-        public void readCsv()
+        public void ReadCsv()
         {
             mydata = new DataTable();  //create an empty DataTable
             StreamReader sr = new StreamReader(inputFileCsv); 
@@ -61,7 +61,7 @@ namespace TecanProgrammingTask_Mokrani
         }
         
         //transpose the dataTable contents
-        public StringBuilder transposeCsv()
+        public StringBuilder TransposeCsv()
         {
             StringBuilder sb = new StringBuilder();  //create a stringbuilder
 
@@ -82,7 +82,7 @@ namespace TecanProgrammingTask_Mokrani
         }
 
         //save the csv output with Format (“filename_transposed.csv”)
-        public void saveFile()
+        public void SaveFile()
         {  
             File.WriteAllText($"{System.IO.Path.GetDirectoryName(inputFileCsv)}\\{System.IO.Path.GetFileNameWithoutExtension(inputFileCsv)}_transposed{System.IO.Path.GetExtension(inputFileCsv)}", transposeCsv().ToString());
             Console.WriteLine(string.Format("{0}\n{1}", "Your csv table has been Transposed \nPlease Check your Directory:", $"{System.IO.Path.GetDirectoryName(inputFileCsv)}"));
