@@ -15,7 +15,6 @@ namespace TecanProgrammingTask_Mokrani
             
         }
 
-
         DataTable mydata ;
         //Convert the csv Contents into a datatable
         public void readCsv()
@@ -57,13 +56,10 @@ namespace TecanProgrammingTask_Mokrani
                         }
                         i = i + 1; //increase the counter so that the program knows it has to fill the data from the next line into the next row of the datatable
                     }
-                }
-               
-            }
-                    
+                }               
+            }                    
         }
         
-
         //transpose the dataTable contents
         public StringBuilder transposeCsv()
         {
@@ -85,7 +81,6 @@ namespace TecanProgrammingTask_Mokrani
             return sb;
         }
 
-
         //save the csv output with Format (“filename_transposed.csv”)
         public void saveFile()
         {  
@@ -94,10 +89,6 @@ namespace TecanProgrammingTask_Mokrani
 
             Console.WriteLine(string.Format("{0}\n{1}", "Your csv table has been Transposed \nPlease Check your Directory:", $"{System.IO.Path.GetDirectoryName(inputFileCsv)}"));
             Console.Read();
-
         }
-
-    }
-
-    
+    }    
 }
