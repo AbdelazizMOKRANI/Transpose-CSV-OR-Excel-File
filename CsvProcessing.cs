@@ -8,14 +8,12 @@ namespace TecanProgrammingTask_Mokrani
     class CsvProcessing
     {
         private string inputFileCsv;
+        DataTable mydata ;
 
         public CsvProcessing(string InputFilePath)
         {
-            inputFileCsv = InputFilePath;
-            
+            inputFileCsv = InputFilePath;            
         }
-
-        DataTable mydata ;
         //Convert the csv Contents into a datatable
         public void ReadCsv()
         {
@@ -28,10 +26,8 @@ namespace TecanProgrammingTask_Mokrani
             {
                 int i = 0;
                 while (sr.EndOfStream == false)    //read the whole file
-                {
-                    
+                {                    
                     string line = sr.ReadLine();    //get a line from the file
-
                     if (line != null && line != String.Empty) //check if there is content in the line
                     {
                         arr = line.Split(';');    //split the line at each ";" and put the elements in the array
@@ -58,8 +54,7 @@ namespace TecanProgrammingTask_Mokrani
                     }
                 }               
             }                    
-        }
-        
+        }       
         //transpose the dataTable contents
         public StringBuilder TransposeCsv()
         {
@@ -80,7 +75,6 @@ namespace TecanProgrammingTask_Mokrani
             }
             return sb;
         }
-
         //save the csv output with Format (“filename_transposed.csv”)
         public void SaveFile()
         {  
